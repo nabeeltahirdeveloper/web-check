@@ -8,6 +8,7 @@ import Button from 'components/Form/Button';
 import { StyledCard } from 'components/Form/Card';
 import Footer from 'components/misc/Footer';
 import FancyBackground from 'components/misc/FancyBackground';
+import History from 'components/Form/History';
 
 import docs from 'utils/docs';
 import colors from 'styles/colors';
@@ -173,6 +174,7 @@ const Home = (): JSX.Element => {
         { errorMsg && <ErrorMessage>{errorMsg}</ErrorMessage>}
         <Button styles="width: calc(100% - 1rem);" size="large" onClick={submit}>Analyze!</Button>
       </UserInputMain>
+      <History />
       <SiteFeaturesWrapper>
         <div className="features">
           <Heading as="h2" size="small" color={colors.primary}>Supported Checks</Heading>
