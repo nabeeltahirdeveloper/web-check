@@ -8,7 +8,6 @@ import Button from 'components/Form/Button';
 import { StyledCard } from 'components/Form/Card';
 import Footer from 'components/misc/Footer';
 import FancyBackground from 'components/misc/FancyBackground';
-import History from 'components/Form/History';
 
 import docs from 'utils/docs';
 import colors from 'styles/colors';
@@ -174,7 +173,6 @@ const Home = (): JSX.Element => {
         { errorMsg && <ErrorMessage>{errorMsg}</ErrorMessage>}
         <Button styles="width: calc(100% - 1rem);" size="large" onClick={submit}>Analyze!</Button>
       </UserInputMain>
-      <History />
       <SiteFeaturesWrapper>
         <div className="features">
           <Heading as="h2" size="small" color={colors.primary}>Supported Checks</Heading>
@@ -183,7 +181,7 @@ const Home = (): JSX.Element => {
             <li><a href="/about">+ more!</a></li>
           </ul>
         </div>
-        {/* <div className="links">
+        <div className="links">
           <a href="https://github.com/lissy93/web-check" title="Check out the source code and documentation on GitHub, and get support or contribute">
             <Button>View on GitHub</Button>
           </a>
@@ -193,7 +191,7 @@ const Home = (): JSX.Element => {
           <a href="/about#api-documentation" title="View the API documentation, to use Web-Check programmatically">
             <Button>API Docs</Button>
           </a>
-        </div> */}
+        </div>
       </SiteFeaturesWrapper>
       <Footer isFixed={true} />
     </HomeContainer>
